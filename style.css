@@ -1,0 +1,95 @@
+/* Commercial-safe Benguiat alternative */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  /* Elliptical red gradient */
+  background: radial-gradient(
+    ellipse at center,
+    #b0171f 0%,
+    #8c1219 35%,
+    #5e0b10 65%,
+    #2a0406 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* WATERMARK LOGO */
+.watermark {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48vmin;
+  height: auto;
+  opacity: 0.32;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(0.3px);
+}
+
+
+/* CONTENT */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  transform: translateY(-6vh); /* prevents overlap */
+}
+
+/* TITLE */
+.title {
+  position: fixed;
+  top: 16%;                 /* THIS is the blank space above lion */
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  color: #ffffff;
+  z-index: 3;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.55),
+    0 0 24px rgba(255,255,255,0.35);
+}
+
+
+/* TIMER */
+.timer {
+  font-size: 72px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin-top: 14px;
+}
+
+
+/* NUMBERS */
+.timer span {
+  margin: 0 6px;
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.6),
+    0 0 22px rgba(255,255,255,0.35);
+}
+
+/* UNITS */
+.timer small {
+  font-size: 18px;
+  margin-right: 16px;
+  opacity: 0.85;
+}
+
